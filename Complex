@@ -1,0 +1,76 @@
+
+
+
+public class Complex{
+
+	private double imajinel;
+	private double gerçek;
+	private double gerçTop;
+	private double imajTop;
+	private double gerçFark;
+	private double imajFark;
+	private double gerÇarp;
+	private double imajÇarp;
+
+	public Complex(double gerçek,double imajinel) {
+		
+		this.imajinel=imajinel;
+		this.gerçek=gerçek;
+	}
+
+	
+	public Complex(Complex o){
+		
+		this.gerçek=o.gerçek;
+		this.imajinel=o.imajinel;
+		
+	}
+	
+	public void setGerçek(double gerçek) {
+		this.gerçek=gerçek;
+	}
+	
+	public double getGerçek() {
+		return gerçek;
+	}
+	
+	public void setİmajinel(double imajinel) {
+		
+		this.imajinel=imajinel;
+	}
+	
+	public double getİmajinel() {
+		return imajinel;
+	}
+	
+	
+	public Complex addComplex(Complex o) {
+		gerçTop=this.gerçek + o.gerçek;
+		imajTop=this.imajinel + o.imajinel;
+		
+		return new Complex(gerçTop,imajTop);
+	}
+	
+	
+	public Complex subtractComplex(Complex o) {
+		gerçFark=this.gerçek - o.gerçek;
+		imajFark=this.imajinel - o.imajinel;
+		
+		return new Complex(gerçFark,imajFark);
+	}
+	
+	public Complex multiplyComplex(Complex o) {
+		gerÇarp=this.gerçek * o.gerçek;
+		imajÇarp=this.imajinel * o.imajinel;
+		
+		return new Complex(gerÇarp,imajÇarp);
+	}
+	
+	
+public String toString() {
+	return gerçek + " + " + imajinel+"i";
+}
+	
+	
+	
+}
