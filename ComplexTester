@@ -1,0 +1,22 @@
+package Okul;
+
+public class ComplexTester {
+
+	static double gerçek;
+	static double imajinel;
+	
+	public static void main(String[] args) {
+
+		Complex d = new Complex(9,7);
+		Complex c = new Complex(3,8);
+		Complex a = new Complex(c);
+		
+		Complex temp = new Complex(0,0);
+		temp = d.subtractComplex(c);
+
+		System.out.println(temp);
+		System.out.println(a);
+		
+	}
+
+}
